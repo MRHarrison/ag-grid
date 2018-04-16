@@ -21,6 +21,7 @@ export declare class GroupCellRenderer extends Component implements ICellRendere
     private nodeWasSwapped;
     constructor();
     init(params: any): void;
+    refresh?( params: any ): void
     private setParams(params);
     private setupComponents();
     private isFirstChildOfFirstChild(rowNode, rowGroupColumn);
