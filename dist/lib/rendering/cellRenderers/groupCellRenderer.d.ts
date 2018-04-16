@@ -2,8 +2,7 @@
 // Project: http://www.ag-grid.com/
 // Definitions by: Niall Crosby <https://github.com/ceolter/>
 import { Component } from "../../widgets/component";
-import { ICellRenderer } from "./iCellRenderer";
-export declare class GroupCellRenderer extends Component implements ICellRenderer {
+export declare class GroupCellRenderer extends Component {
     private static TEMPLATE;
     private gridOptionsWrapper;
     private expressionService;
