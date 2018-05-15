@@ -20,6 +20,7 @@ export declare class GroupCellRenderer extends Component implements ICellRendere
     private params;
     private nodeWasSwapped;
     constructor();
+    refresh?( params: any ): void;
     init(params: any): void;
     private setParams(params);
     private setupComponents();
