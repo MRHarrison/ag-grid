@@ -277,9 +277,9 @@ export class GridPanel extends BeanStub {
         this.setPinnedContainersVisible();
         this.setBodyAndHeaderHeights();
         this.disableBrowserDragging();
-        this.addShortcutKeyListeners();
+        // this.addShortcutKeyListeners();
         this.addMouseEvents();
-        this.addKeyboardEvents();
+        // this.addKeyboardEvents();
         this.addBodyViewportListener();
         this.addStopEditingWhenGridLosesFocus();
 
@@ -404,7 +404,7 @@ export class GridPanel extends BeanStub {
         });
     }
 
-    private addKeyboardEvents(): void {
+    // private addKeyboardEvents(): void {
         var eventNames = ['keydown','keypress'];
         eventNames.forEach( eventName => {
             var listener = this.processKeyboardEvent.bind(this, eventName);

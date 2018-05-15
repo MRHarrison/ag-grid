@@ -8,13 +8,13 @@ var FUNCTION_ARGUMENT_NAMES = /([^\s,]+)/g;
 export class Timer {
 
     private timestamp = new Date().getTime();
-    
+
     public print(msg: string) {
         var duration = (new Date().getTime()) - this.timestamp;
         console.log(`${msg} = ${duration}`);
         this.timestamp = new Date().getTime();
     }
-    
+
 }
 
 /** HTML Escapes. */
@@ -356,8 +356,8 @@ export class Utils {
         element.addEventListener("input", listener);
         // IE doesn't fire changed for special keys (eg delete, backspace), so need to
         // listen for this further ones
-        element.addEventListener("keydown", listener);
-        element.addEventListener("keyup", listener);
+        // element.addEventListener("keydown", listener);
+        // element.addEventListener("keyup", listener);
     }
 
     //if value is undefined, null or blank, returns null, otherwise returns the value
@@ -504,7 +504,7 @@ export class Utils {
             return null;
         }
     }
-    
+
     static offsetHeight(element: HTMLElement) {
         return element && element.clientHeight ? element.clientHeight : 0;
     }
@@ -575,7 +575,7 @@ export class Utils {
             this.insertIntoArray(array, obj, toIndex);
         });
     }
-    
+
     static defaultComparator(valueA: any, valueB: any): number {
         var valueAMissing = valueA === null || valueA === undefined;
         var valueBMissing = valueB === null || valueB === undefined;
