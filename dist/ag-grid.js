@@ -2085,13 +2085,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    //adds all type of change listeners to an element, intended to be a text field
 	    Utils.addChangeListener = function (element, listener) {
-	        element.addEventListener("changed", listener);
-	        element.addEventListener("paste", listener);
-	        element.addEventListener("input", listener);
+	        // element.addEventListener("changed", listener);
+	        // element.addEventListener("paste", listener);
+	        // element.addEventListener("input", listener);
 	        // IE doesn't fire changed for special keys (eg delete, backspace), so need to
 	        // listen for this further ones
-	        element.addEventListener("keydown", listener);
-	        element.addEventListener("keyup", listener);
+	        // element.addEventListener("keydown", listener);
+	        // element.addEventListener("keyup", listener);
 	    };
 	    //if value is undefined, null or blank, returns null, otherwise returns the value
 	    Utils.makeNull = function (value) {
@@ -8714,9 +8714,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setPinnedContainersVisible();
 	        this.setBodyAndHeaderHeights();
 	        this.disableBrowserDragging();
-	        this.addShortcutKeyListeners();
+	        // this.addShortcutKeyListeners();
 	        this.addMouseEvents();
-	        this.addKeyboardEvents();
+	        // this.addKeyboardEvents();
 	        this.addBodyViewportListener();
 	        this.addStopEditingWhenGridLosesFocus();
 	        if (this.$scope) {
@@ -8822,14 +8822,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	    };
 	    GridPanel.prototype.addKeyboardEvents = function () {
-	        var _this = this;
-	        var eventNames = ['keydown', 'keypress'];
-	        eventNames.forEach(function (eventName) {
-	            var listener = _this.processKeyboardEvent.bind(_this, eventName);
-	            _this.eAllCellContainers.forEach(function (container) {
-	                _this.addDestroyableEventListener(container, eventName, listener);
-	            });
-	        });
+	        // var eventNames = ['keydown','keypress'];
+	        // eventNames.forEach( eventName => {
+	        //     var listener = this.processKeyboardEvent.bind(this, eventName);
+	        //     this.eAllCellContainers.forEach( container => {
+	        //         this.addDestroyableEventListener(container, eventName, listener);
+	        //     });
+	        // });
 	    };
 	    GridPanel.prototype.addBodyViewportListener = function () {
 	        var _this = this;
@@ -14861,12 +14860,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	            if (closeOnEsc) {
 	                eBody.addEventListener('keydown', hidePopupOnEsc);
 	            }
-	            eBody.addEventListener('click', hidePopup);
-	            eBody.addEventListener('touchstart', hidePopup);
-	            eBody.addEventListener('contextmenu', hidePopup);
+	            // eBody.addEventListener('click', hidePopup);
+	            // eBody.addEventListener('touchstart', hidePopup);
+	            // eBody.addEventListener('contextmenu', hidePopup);
 	            //eBody.addEventListener('mousedown', hidePopup);
-	            eChild.addEventListener('click', consumeMouseClick);
-	            eChild.addEventListener('touchstart', consumeTouchClick);
+	            // eChild.addEventListener('click', consumeMouseClick);
+	            // eChild.addEventListener('touchstart', consumeTouchClick);
 	            //eChild.addEventListener('mousedown', consumeClick);
 	        }, 0);
 	        // let timeOfMouseEventOnChild = new Date().getTime();
@@ -16842,7 +16841,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	var utils_1 = __webpack_require__(7);
 	var TouchListener = (function () {
 	    function TouchListener(eElement) {
-	        var _this = this;
 	        this.destroyFuncs = [];
 	        this.touching = false;
 	        this.eventService = new eventService_1.EventService();
@@ -16850,13 +16848,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var startListener = this.onTouchStart.bind(this);
 	        var moveListener = this.onTouchMove.bind(this);
 	        var endListener = this.onTouchEnd.bind(this);
-	        this.eElement.addEventListener('touchstart', startListener);
-	        this.eElement.addEventListener('touchmove', moveListener);
-	        this.eElement.addEventListener('touchend', endListener);
+	        // this.eElement.addEventListener('touchstart', startListener);
+	        // this.eElement.addEventListener('touchmove', moveListener);
+	        // this.eElement.addEventListener('touchend', endListener);
 	        this.destroyFuncs.push(function () {
-	            _this.eElement.addEventListener('touchstart', startListener);
-	            _this.eElement.addEventListener('touchmove', moveListener);
-	            _this.eElement.addEventListener('touchend', endListener);
+	            // this.eElement.addEventListener('touchstart', startListener);
+	            // this.eElement.addEventListener('touchmove', moveListener);
+	            // this.eElement.addEventListener('touchend', endListener);
 	        });
 	    }
 	    TouchListener.prototype.getActiveTouch = function (touchList) {

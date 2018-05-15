@@ -188,9 +188,9 @@ var GridPanel = (function (_super) {
         this.setPinnedContainersVisible();
         this.setBodyAndHeaderHeights();
         this.disableBrowserDragging();
-        this.addShortcutKeyListeners();
+        // this.addShortcutKeyListeners();
         this.addMouseEvents();
-        this.addKeyboardEvents();
+        // this.addKeyboardEvents();
         this.addBodyViewportListener();
         this.addStopEditingWhenGridLosesFocus();
         if (this.$scope) {
@@ -296,14 +296,13 @@ var GridPanel = (function (_super) {
         });
     };
     GridPanel.prototype.addKeyboardEvents = function () {
-        var _this = this;
-        var eventNames = ['keydown', 'keypress'];
-        eventNames.forEach(function (eventName) {
-            var listener = _this.processKeyboardEvent.bind(_this, eventName);
-            _this.eAllCellContainers.forEach(function (container) {
-                _this.addDestroyableEventListener(container, eventName, listener);
-            });
-        });
+        // var eventNames = ['keydown','keypress'];
+        // eventNames.forEach( eventName => {
+        //     var listener = this.processKeyboardEvent.bind(this, eventName);
+        //     this.eAllCellContainers.forEach( container => {
+        //         this.addDestroyableEventListener(container, eventName, listener);
+        //     });
+        // });
     };
     GridPanel.prototype.addBodyViewportListener = function () {
         var _this = this;

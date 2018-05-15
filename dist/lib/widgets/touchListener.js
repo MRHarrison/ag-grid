@@ -10,7 +10,6 @@ var eventService_1 = require("../eventService");
 var utils_1 = require("../utils");
 var TouchListener = (function () {
     function TouchListener(eElement) {
-        var _this = this;
         this.destroyFuncs = [];
         this.touching = false;
         this.eventService = new eventService_1.EventService();
@@ -18,13 +17,13 @@ var TouchListener = (function () {
         var startListener = this.onTouchStart.bind(this);
         var moveListener = this.onTouchMove.bind(this);
         var endListener = this.onTouchEnd.bind(this);
-        this.eElement.addEventListener('touchstart', startListener);
-        this.eElement.addEventListener('touchmove', moveListener);
-        this.eElement.addEventListener('touchend', endListener);
+        // this.eElement.addEventListener('touchstart', startListener);
+        // this.eElement.addEventListener('touchmove', moveListener);
+        // this.eElement.addEventListener('touchend', endListener);
         this.destroyFuncs.push(function () {
-            _this.eElement.addEventListener('touchstart', startListener);
-            _this.eElement.addEventListener('touchmove', moveListener);
-            _this.eElement.addEventListener('touchend', endListener);
+            // this.eElement.addEventListener('touchstart', startListener);
+            // this.eElement.addEventListener('touchmove', moveListener);
+            // this.eElement.addEventListener('touchend', endListener);
         });
     }
     TouchListener.prototype.getActiveTouch = function (touchList) {

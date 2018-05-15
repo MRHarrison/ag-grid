@@ -404,14 +404,14 @@ export class GridPanel extends BeanStub {
         });
     }
 
-    // private addKeyboardEvents(): void {
-        var eventNames = ['keydown','keypress'];
-        eventNames.forEach( eventName => {
-            var listener = this.processKeyboardEvent.bind(this, eventName);
-            this.eAllCellContainers.forEach( container => {
-                this.addDestroyableEventListener(container, eventName, listener);
-            });
-        });
+    private addKeyboardEvents(): void {
+        // var eventNames = ['keydown','keypress'];
+        // eventNames.forEach( eventName => {
+        //     var listener = this.processKeyboardEvent.bind(this, eventName);
+        //     this.eAllCellContainers.forEach( container => {
+        //         this.addDestroyableEventListener(container, eventName, listener);
+        //     });
+        // });
     }
 
     private addBodyViewportListener(): void {

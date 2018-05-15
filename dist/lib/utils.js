@@ -319,13 +319,13 @@ var Utils = (function () {
     };
     //adds all type of change listeners to an element, intended to be a text field
     Utils.addChangeListener = function (element, listener) {
-        element.addEventListener("changed", listener);
-        element.addEventListener("paste", listener);
-        element.addEventListener("input", listener);
+        // element.addEventListener("changed", listener);
+        // element.addEventListener("paste", listener);
+        // element.addEventListener("input", listener);
         // IE doesn't fire changed for special keys (eg delete, backspace), so need to
         // listen for this further ones
-        element.addEventListener("keydown", listener);
-        element.addEventListener("keyup", listener);
+        // element.addEventListener("keydown", listener);
+        // element.addEventListener("keyup", listener);
     };
     //if value is undefined, null or blank, returns null, otherwise returns the value
     Utils.makeNull = function (value) {

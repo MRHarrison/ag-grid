@@ -156,7 +156,7 @@ export class PopupService {
 
         this.callPostProcessPopup(params.ePopup, params.eventSource, null, params.type, params.column, params.rowNode);
     }
-    
+
     private positionPopup(params: {
                         ePopup: HTMLElement,
                         minWidth?: number,
@@ -262,12 +262,12 @@ export class PopupService {
             if (closeOnEsc) {
                 eBody.addEventListener('keydown', hidePopupOnEsc);
             }
-            eBody.addEventListener('click', hidePopup);
-            eBody.addEventListener('touchstart', hidePopup);
-            eBody.addEventListener('contextmenu', hidePopup);
+            // eBody.addEventListener('click', hidePopup);
+            // eBody.addEventListener('touchstart', hidePopup);
+            // eBody.addEventListener('contextmenu', hidePopup);
             //eBody.addEventListener('mousedown', hidePopup);
-            eChild.addEventListener('click', consumeMouseClick);
-            eChild.addEventListener('touchstart', consumeTouchClick);
+            // eChild.addEventListener('click', consumeMouseClick);
+            // eChild.addEventListener('touchstart', consumeTouchClick);
             //eChild.addEventListener('mousedown', consumeClick);
         }, 0);
 

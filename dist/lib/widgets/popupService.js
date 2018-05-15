@@ -206,12 +206,12 @@ var PopupService = (function () {
             if (closeOnEsc) {
                 eBody.addEventListener('keydown', hidePopupOnEsc);
             }
-            eBody.addEventListener('click', hidePopup);
-            eBody.addEventListener('touchstart', hidePopup);
-            eBody.addEventListener('contextmenu', hidePopup);
+            // eBody.addEventListener('click', hidePopup);
+            // eBody.addEventListener('touchstart', hidePopup);
+            // eBody.addEventListener('contextmenu', hidePopup);
             //eBody.addEventListener('mousedown', hidePopup);
-            eChild.addEventListener('click', consumeMouseClick);
-            eChild.addEventListener('touchstart', consumeTouchClick);
+            // eChild.addEventListener('click', consumeMouseClick);
+            // eChild.addEventListener('touchstart', consumeTouchClick);
             //eChild.addEventListener('mousedown', consumeClick);
         }, 0);
         // let timeOfMouseEventOnChild = new Date().getTime();
